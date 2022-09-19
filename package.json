@@ -1,0 +1,60 @@
+{
+  "name": "@trunx-io/plugin-eosio",
+  "description": "Plugin containing EOSIO commands for TrunxIO Wallet",
+  "version": "1.0.1",
+  "author": "Andrew Chaney (netuoso) @netuoso",
+  "bugs": "https://github.com/Trunx-IO/plugin-eosio/issues",
+  "dependencies": {
+    "@trunx-io/eosio-signer": "1.0.1",
+    "@trunx-io/ipc-client": "1.0.1",
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "cli-ux": "^5.5.1",
+    "colors": "^1.4.0",
+    "eosio-signing-request": "^2.5.0",
+    "eosjs": "^20.0.3",
+    "inquirer": "^8.1.0",
+    "node-emoji": "^1.10.0",
+    "node-fetch": "^2.6.0",
+    "zlib": "^1.0.5"
+  },
+  "devDependencies": {
+    "@oclif/plugin-help": "^2",
+    "globby": "^10"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "files": [
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src",
+    "/yarn.lock"
+  ],
+  "homepage": "https://github.com/Trunx-IO/plugin-eosio",
+  "keywords": [
+    "oclif-plugin"
+  ],
+  "license": "MIT",
+  "oclif": {
+    "commands": "./src/commands",
+    "topics": {
+      "eosio": {
+        "description": "commands to interact with EOSIO networks"
+      }
+    },
+    "warn-if-update-available": {
+      "timeoutInDays": 7
+    },
+    "devPlugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "Trunx-IO/plugin-eosio",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}

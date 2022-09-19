@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+
+let res = require('@oclif/command').run()
+.catch(require('@oclif/errors/handle'))
+
+return res;
